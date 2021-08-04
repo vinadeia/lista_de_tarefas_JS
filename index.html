@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lista Tarefas</title>
+</head>
+<body>
+    <div class="conteudo">
+        <div class="topo">
+            <input type="text" 
+                id="inputNovaTarefa"
+                placeholder="Adicione uma nova tarefa"
+            >
+            <button id="btnAddTarefa"></button>
+        </div>
+
+        <ul id="listaTarefas">
+        </ul>
+    </div>
+
+    <div id="janelaEdicao">
+        <button id="janelaEdicaoFechar">x</button>
+        <h2 id="idTarefaEdicao">#1021</h2>
+        <br>
+        <form action="">
+            <div class="frm-linha">
+                <label for="nome">Nome</label>
+                <input type="text" id="inputTarefaNomeEdicao">
+            </div>
+            <div class="frm-linha">
+                <button id="btnAtualizarTarefa">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <div id="janelaEdicaoFundo"></div>
+    <script src="script.js"></script>
+</body>
+</html>

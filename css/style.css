@@ -1,0 +1,213 @@
+*{
+    --light-pink: #cd00dd;
+    --medium-pink: #cf02dfa3;
+    --dark-pink: #9a00dd57;
+
+    --pure-white: #ffff;
+    --white-ice:#f9f9f9;
+    --light-grey: #ffebeb96;
+    --dark-grey: #191818;
+
+    --transparent-red: #fed0d0;
+    --transparent-black: #000000b5;
+
+    --dark-purple: #1a0d27;
+    --dark-purple2: #1a0132;
+    --medium-purple: #33254b;
+    --medium-purple2: #483764;
+    --pure-purple: #483764;
+}
+body{
+    background-color: var(--white-ice);
+    color: var(--light-pink);
+    margin: 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: var(--light-grey);
+    box-shadow: 20px 11px 23px var(--dark-pink);
+    padding: 55px;
+    border-radius: 12px;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.topo input{
+    width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--light-pink);
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--light-pink);
+}
+
+
+button{
+    min-width: 20px;
+    min-height: 20px;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: var(--white-ice);
+    cursor: pointer;
+    background-position: center
+}
+.btnAcao{
+    border-radius: 50%;
+    background-color: var(--pure-white);
+    margin-right: 8px;
+}
+
+.textoTarefa{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+}
+
+button#btnAddTarefa{
+    background-image: url(./planning.svg);
+    border-radius: 12px;
+    background-color: var(--pure-white);
+    background-size: 20px;
+    height: 45px;
+    width: 45px;
+}
+.btnAcao:hover,
+button#btnAddTarefa:hover{
+    background-color: var(--pure-white);
+    cursor: pointer;
+}
+
+button.pencil{
+    background-image: url(./pencil.svg);
+}
+button.trash{
+    background-image: url(./close.svg);
+}
+
+#listaTarefas{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaTarefas li {
+    padding: 20px;
+    background-color: var(--transparent-red);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+/* Modal */
+
+#janelaEdicao{
+    color: #ffff !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: var(--dark-purple);
+    width: 415px;
+    border-radius: 12px;
+    z-index: 200;
+    display: none;
+}
+
+#janelaEdicao.abrir{
+    display: block !important;
+    
+}
+
+#janelaEdicaoFundo{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;
+    z-index: 100;
+    background-color: var(--transparent-black);
+    display: none;
+}
+
+#janelaEdicaoFechar{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    background: var(--medium-purple);
+    color: #fff;
+    cursor: pointer;
+}
+
+#janelaEdicaoFechar:hover{
+    background-color: var(--pure-purple);
+}
+
+#janelaEdicaoFundo.abrir{
+    display: block !important;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.frm-linha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.frm-linha label{
+    margin-bottom: 7px;
+}
+
+.frm-linha input {
+    padding: 15px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid var(--dark-grey);
+    font-size: 1.2rem;
+    color: var(--dark-purple2);
+}
+
+.frm-linha button{
+    background-color: var(--medium-purple);
+    border: 1px solid var(--dark-grey);
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 17px;
+    text-align: center;
+    height: 50px;
+    font-size: 1.2rem;
+    outline: none;
+    color: #ccc;
+}
+
+.frm-linha button:hover{
+    background: var(--medium-purple2);
+}
